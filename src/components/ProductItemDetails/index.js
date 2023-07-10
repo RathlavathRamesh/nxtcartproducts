@@ -3,7 +3,7 @@ import './index.css'
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import {Link} from 'react-router-dom'
-import {AiTwotoneStar} from 'react-icons/ai'
+// import {AiTwotoneStar} from 'react-icons/ai'
 import Loader from 'react-loader-spinner'
 import Header from '../Header'
 import SimilarProductItem from '../SimilarProductItem'
@@ -88,7 +88,12 @@ class ProductItemDetails extends Component {
                 <p className="price">Rs {itemData.price}/- </p>
                 <div className="revcard">
                   <button type="button" className="logout-desktop-btn extra">
-                    {itemData.rating} <AiTwotoneStar className="star" />
+                    {itemData.rating}
+                    <img
+                      src="https://assets.ccbp.in/frontend/react-js/star-img.png"
+                      alt="star"
+                      className="star"
+                    />
                   </button>
                   <p className="reviews">{itemData.totalReviews} Reviews</p>
                 </div>
@@ -117,12 +122,14 @@ class ProductItemDetails extends Component {
           </>
         )}
         {dataready && (
-          <ul className="similarItems">
-            <SimilarProductItem
-              item={sameProducts[0]}
-              key={sameProducts[0].id}
-            />
-          </ul>
+          <>
+            <h1>SimilarProducts</h1>
+            <ul className="similarItems">
+              {sameProducts.map(each => (
+                <SimilarProductItem item={each} key={each.id} />
+              ))}
+            </ul>
+          </>
         )}
         {apiFail && (
           <div>

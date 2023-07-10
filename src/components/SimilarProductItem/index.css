@@ -1,1 +1,23 @@
 /* Write your CSS here */
+.similarItem {
+  list-style-type: none;
+  margin: 2vh;
+  height: 70vh;
+}
+.similarImage {
+  height: 35vh;
+  border-radius: 2vh;
+}
+.sim {
+  font-size: 18px;
+  height: 7vh;
+}
+.styleheadingsim {
+  color: #616e7c;
+  margin-left: 2vh;
+  font-size: 23px;
+}
+.rates {
+  display: flex;
+  justify-content: space-between;
+}

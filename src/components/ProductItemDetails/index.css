@@ -12,8 +12,10 @@
   border-radius: 4vh;
 }
 .similarItems {
-  height: 50vh;
+  height: 80vh;
+  margin-left: 5vh;
   display: flex;
+  flex-wrap: wrap;
   padding: 10px;
   list-style-type: none;
 }
