@@ -84,7 +84,7 @@ class ProductItemDetails extends Component {
                 className="itemImage"
               />
               <div>
-                <h1 className="styleheading">{itemData.style}</h1>
+                <h1 className="styleheading">{itemData.title}</h1>
                 <p className="price">Rs {itemData.price}/- </p>
                 <div className="revcard">
                   <button type="button" className="logout-desktop-btn extra">
